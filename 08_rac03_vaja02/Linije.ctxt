@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Linije
+comment1.params=koliko\ kaj\ terminal
+comment1.target=void\ gor(int,\ char,\ com.googlecode.lanterna.terminal.Terminal)
+comment2.params=koliko\ kaj\ terminal
+comment2.target=void\ dol(int,\ char,\ com.googlecode.lanterna.terminal.Terminal)
+comment3.params=koliko\ kaj\ terminal
+comment3.target=void\ levo(int,\ char,\ com.googlecode.lanterna.terminal.Terminal)
+comment4.params=koliko\ kaj\ terminal
+comment4.target=void\ desno(int,\ char,\ com.googlecode.lanterna.terminal.Terminal)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6
