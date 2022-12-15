@@ -1,0 +1,5 @@
+Naloga 1 
+b) Izpise, da je so vrednosti tabela enaki 0.
+
+Naloga 2
+a) Ne izjava ni resnična saj stevec ne obstaja.
