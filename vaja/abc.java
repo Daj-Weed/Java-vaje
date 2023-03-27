@@ -56,12 +56,14 @@ public class vaja extends Application
         for (int i = 0; i < 1; i++) {
             Polygon trikotnik = new Polygon();
             double tocke[] = new double[6];
-            tocke[0] = 0.0 + (i*3);
-            tocke[1] = 0.0 + (i*3);
-            tocke[2] = Math.random() * (40 - 5) + 5;
-            tocke[3] = Math.random() * (40 - 5) + 5;
-            tocke[4] = Math.random() * (40 - 5) + 5;
-            tocke[5] = Math.random() * (40 - 5) + 5;
+            double premikX = Math.random() * 700;
+            double premikY = Math.random() * 700;
+            tocke[0] = 0.0 + premikX;
+            tocke[1] = 0.0 + premikY;
+            tocke[2] = (Math.random() * (40 - 5) + 5) + premikX;
+            tocke[3] = (Math.random() * (40 - 5) + 5) + preminY;
+            tocke[4] = (Math.random() * (40 - 5) + 5) + premikX;
+            tocke[5] = (Math.random() * (40 - 5) + 5) + premikY;
             trikotnik.getPoints().addAll(new Double[]{tocke[0],tocke[1],tocke[2],tocke[3],tocke[4],tocke[5]});
             int red = (int)(Math.random() * 255);
             int blue = (int)(Math.random() * 255);
