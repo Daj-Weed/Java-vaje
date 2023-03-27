@@ -19,7 +19,7 @@ import javafx.stage.Stage;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class abc extends Application
+public class vaja extends Application
 {
     // We keep track of the count, and label displaying the count:
     private int count = 0;
@@ -37,39 +37,53 @@ public class abc extends Application
     {
         // Create a Button or any control item
         Group root = new Group();
+        
         int kolikokratP = (int)(Math.random()*10 + 30);
         for (int i = 0; i < kolikokratP; i++) {
             Rectangle rectangle = new Rectangle();
             rectangle.setWidth((Math.random() * (40 - 5)) + 5);
             rectangle.setHeight((Math.random() * (40 - 5)) + 5);
-            rectangle.setX(Math.random() * 600);
-            rectangle.setY(Math.random() * 600);
-            rectangle.setFill(Color.RED); 
+            rectangle.setX(Math.random() * 700);
+            rectangle.setY(Math.random() * 700);
+            int red = (int)(Math.random() * 255);
+            int blue = (int)(Math.random() * 255);
+            int green = (int)(Math.random() * 255);
+            rectangle.setFill(Color.rgb(red, blue, green)); 
             root.getChildren().add(rectangle);
         }
         
         int kolikokratT = (int)(Math.random()*10 + 20);
-        for (int i = 0; i < kolikokratT; i++) {
+        for (int i = 0; i < 1; i++) {
             Polygon trikotnik = new Polygon();
-            double tocke[] = {};
-            trikotnik.getPoints().addAll(new Double[]{0.0, 0.0,
-                                                      0.0, 100.0,
-                                                      100.0, 0.0 });
-
+            double tocke[] = new double[6];
+            tocke[0] = 0.0 + (i*3);
+            tocke[1] = 0.0 + (i*3);
+            tocke[2] = Math.random() * (40 - 5) + 5;
+            tocke[3] = Math.random() * (40 - 5) + 5;
+            tocke[4] = Math.random() * (40 - 5) + 5;
+            tocke[5] = Math.random() * (40 - 5) + 5;
+            trikotnik.getPoints().addAll(new Double[]{tocke[0],tocke[1],tocke[2],tocke[3],tocke[4],tocke[5]});
+            int red = (int)(Math.random() * 255);
+            int blue = (int)(Math.random() * 255);
+            int green = (int)(Math.random() * 255);
+            trikotnik.setFill(Color.rgb(red, blue, green)); 
             root.getChildren().add(trikotnik);
         }
         
         int kolikokratK = (int)(Math.random()*10 + 40);
         for (int i = 0; i < kolikokratK; i++) {
             Circle krog = new Circle();
-            krog.setCenterX(Math.random() * 600);
-            krog.setCenterY(Math.random() * 600);
+            krog.setCenterX(Math.random() * 700);
+            krog.setCenterY(Math.random() * 700);
             krog.setRadius((Math.random() * (40 - 5)) + 5);
-            krog.setFill(Color.BLUE); 
+            int red = (int)(Math.random() * 255);
+            int blue = (int)(Math.random() * 255);
+            int green = (int)(Math.random() * 255);
+            krog.setFill(Color.rgb(red, blue, green)); 
             root.getChildren().add(krog);
         }
         // JavaFX must have a Scene (window content) inside a Stage (window)
-        Scene scene = new Scene(root, 600, 600);
+        Scene scene = new Scene(root, 1000, 1000);
         stage.setTitle("JavaFX Example");
         stage.setScene(scene);
 
