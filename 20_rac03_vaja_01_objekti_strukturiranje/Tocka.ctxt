@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.target=Tocka
+comment0.text=\r\n\ \ \ ravninska\ to\u010Dka,\ omejena\ na\ [-100,100]\ od\ izhodi\u0161\u010Da\ v\ smereh\ x\ in\ y\r\n\ \ \ zna\ podati\ svojo\ oddaljenost\ od\ koordinatnega\ izhodi\u0161\u010Da\r\n\ \ \ zna\ se\ vizualizirati\ v\ eni\ izmed\ oblik\ (x,y)\ ali\ {x,y}\r\n
+numComments=1
