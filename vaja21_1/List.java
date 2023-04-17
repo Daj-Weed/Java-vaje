@@ -17,7 +17,8 @@ public class List {
   public void zigosaj(int zig[][], int stolpec, int vrstica) {
     for (int i = 0; i < 3; i++) {
       for (int j = 0; j < 3; j++) {
-        list[i+vrstica][j+stolpec] = zig[i][j];
+        if (i + vrstica == sirina ||j + stolpec == dolzina);
+          list[i+vrstica][j+stolpec] = zig[i][j];
       }
     }
   }
