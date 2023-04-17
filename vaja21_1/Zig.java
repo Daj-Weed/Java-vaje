@@ -6,7 +6,7 @@ public class Zig {
   public Zig(int sirina, int dolzina) {
     this.sirina = sirina;
     this.dolzina = dolzina;
-    zig = new int [sirina][dolzina];
+    zig = new int[sirina][dolzina];
     for (int i = 0; i < sirina; i++) {
       for (int j = 0; j < dolzina; j++) {
         zig[i][j] = 5;
@@ -16,5 +16,13 @@ public class Zig {
 
   public int[][] GetZig() {
     return zig;
+  }
+
+  public int GetSirinaZiga() {
+    return sirina;
+  }
+
+  public int GetDolzinaZiga() {
+    return dolzina;
   }
 }
