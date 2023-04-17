@@ -5,7 +5,7 @@ public class Main {
     Zig zig = new Zig(3,3);
     int zigTab[][] = zig.GetZig();
     if(!list.jeZigosan()) {
-      list.zigosaj(zigTab);
+      list.zigosaj(zigTab, 3, 7);
     }
 
     for (int i = 0; i < 18; i++) {
