@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=List
+comment1.params=sirina\ dolzina
+comment1.target=List(int,\ int)
+comment2.params=
+comment2.target=void\ SetList()
+comment3.params=
+comment3.target=int[][]\ GetList()
+numComments=4
