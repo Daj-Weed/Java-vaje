@@ -22,15 +22,15 @@ public class SodokuA {
     int m = 0;
     if (stKvadtata > 3 && stKvadtata < 7) {
       h = 3;
-      m = stKvadtata - 3;
+      m = stKvadtata - 4;
     } else if (stKvadtata > 6) {
       h = 6;
-      m = stKvadtata - 6;
+      m = stKvadtata - 7;
     }
 
     for (int i = 0; i < 3; i++) {
-      for (int j = 0; j < 3; j++) {
-        vVrsto[i*3 + j] = resenaTabela[i+h][j*m];
+      for (int j = m*3; j < m*3+3; j++) {
+        vVrsto[i*3 + j] = resenaTabela[i+h][j];
       }
     }
 
