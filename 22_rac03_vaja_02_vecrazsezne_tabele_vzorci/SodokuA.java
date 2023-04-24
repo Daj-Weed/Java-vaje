@@ -19,7 +19,7 @@ public class SodokuA {
     
     int[] vVrsto = new int[9];
     int h = 0;
-    int m = 0;
+    int m = stKvadtata - 1;
     if (stKvadtata > 3 && stKvadtata < 7) {
       h = 3;
       m = stKvadtata - 4;
@@ -29,8 +29,9 @@ public class SodokuA {
     }
 
     for (int i = 0; i < 3; i++) {
-      for (int j = m*3; j < m*3+3; j++) {
-        vVrsto[i*3 + j] = resenaTabela[i+h][j];
+      for (int j = m*3, l = 0; j < m*3+3; j++) {
+        vVrsto[i*3 + l] = resenaTabela[i+h][j];
+        l++;
       }
     }
 
@@ -45,7 +46,7 @@ public class SodokuA {
     }
     return true;
   }
-
+  
   public boolean aliJeSudokuDiagonala (int[][] resenaTabela) {
     int[] stevke = new int[10];
 
