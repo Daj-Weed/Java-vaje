@@ -1,6 +1,5 @@
 import java.util.Arrays;
 
-import java.util.Arrays;
 
 public class Main {
   public static void main(String[] args) {
@@ -18,6 +17,7 @@ public class Main {
                   {2,8,7, 4,1,9, 6,3,5},
                   {3,4,5, 2,6,6, 1,7,9}};
 
-    System.out.println(sodokuA.aliJeSudoku3x3kvadrat(tn, 4));
+    System.out.println(sodokuA.aliJeSudoku3x3kvadrat(tn, 8));
   }
+
 }

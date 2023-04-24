@@ -29,5 +29,20 @@ public class Naloga1 {
         System.out.println("stevke: " + Arrays.toString(stevke));
         System.out.println("Iz zadnje tabele ugotovite, katera vrednost manjka ....");
 
-    }
+        int rowOffset = (9 / 3) * 3;
+        int colOffset = (9 % 3) * 3;
+
+        System.out.println(rowOffset);
+        System.out.println(colOffset);
+
+        for (int i = 0; i < 9; i++) {
+          int row = rowOffset + (i / 3);
+          int col = colOffset + (i % 3);
+
+          System.out.println(rowOffset);
+          System.out.println(colOffset);
+        }
+        
+    
+      }
 }

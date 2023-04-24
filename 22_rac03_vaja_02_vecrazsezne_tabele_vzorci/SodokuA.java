@@ -18,9 +18,19 @@ public class SodokuA {
     int[] stevke = new int[10];
     
     int[] vVrsto = new int[9];
-    for (int i = (stKvadtata - 3)*3; i < stKvadtata*3; i++) {
-      for (int j = 0;j < 3; j++) {
-        vVrsto[i*3 + j] = resenaTabela[i][j];
+    int h = 0;
+    int m = 0;
+    if (stKvadtata > 3 && stKvadtata < 7) {
+      h = 3;
+      m = stKvadtata - 3;
+    } else if (stKvadtata > 6) {
+      h = 6;
+      m = stKvadtata - 6;
+    }
+
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        vVrsto[i*3 + j] = resenaTabela[i+h][j*m];
       }
     }
 
