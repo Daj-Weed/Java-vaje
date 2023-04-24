@@ -10,7 +10,7 @@ public class SodokuA {
     return tabela9x9;
   }
 
-  public void setSodokuTabela(int[][] resenaTabela) {
+  public void setSodokuTabela(int[][] tabela9x9) {
     this.tabela9x9 = tabela9x9;
   }
   
@@ -35,8 +35,6 @@ public class SodokuA {
       }
     }
 
-    System.out.println(Arrays.toString(vVrsto));
-
     for(int i = 0; i < vVrsto.length; i++)
       stevke[ vVrsto[i] ] = 1;
       
@@ -46,7 +44,7 @@ public class SodokuA {
     }
     return true;
   }
-  
+
   public boolean aliJeSudokuDiagonala (int[][] resenaTabela) {
     int[] stevke = new int[10];
 
@@ -80,4 +78,22 @@ public class SodokuA {
     }
     return true;
   }
-}
+  
+  public boolean aliJeSodokuResen(int[][] resenaTabela) {
+      boolean[] jePravilno = new boolean[27];
+      for (int i = 1; i < 10; i++) {
+          jePravilno[i-1] = aliJeSudoku3x3kvadrat(resenaTabela, i);
+      }
+      for (int i = 0; i < 9; i++) {
+          jePravilno[i+9] = aliJeSudokuVrstica(resenaTabela, i);
+      }
+      for (int i = 0; i < 9; i++) {
+          jePravilno[i+18] = aliJeSudokuStolpec(resenaTabela, i);
+      }
+      
+      for (int i = 0; i < jePravilno.length; i++) {
+        if(jePravilno[i] != true)
+            return false;
+      }
+      return true;
+  }
