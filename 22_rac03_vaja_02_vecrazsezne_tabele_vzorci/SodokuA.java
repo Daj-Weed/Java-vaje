@@ -10,7 +10,7 @@ public class SodokuA {
     return tabela9x9;
   }
 
-  public void setSodokuTabela(int[][] tabela9x9) {
+  public void setSodokuTabela(int[][] resenaTabela) {
     this.tabela9x9 = tabela9x9;
   }
   
