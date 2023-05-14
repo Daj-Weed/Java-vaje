@@ -14,8 +14,8 @@ class Pretvornik_Valute {
         JTextField izpis = new JTextField(1);
         String valuta1[] = { "EUR", "USD", "RMB", "GBP", "CAD", "AUD", "RUB" };
         String valuta2[] = { "EUR", "USD", "RMB", "GBP", "CAD", "AUD", "RUB" };
-        JComboBox izValute = new JComboBox(valuta1);
-        JComboBox vValuto = new JComboBox(valuta2);
+        JComboBox<String> izValute = new JComboBox<>(valuta1);
+        JComboBox<String> vValuto = new JComboBox<>(valuta2);
         JButton gumb = new JButton("Pretvori");
         // Prvi Napis
         napis1.setText("Vpisite vsoto katero zelite pretvoriti.");
@@ -32,7 +32,9 @@ class Pretvornik_Valute {
         vnos.setBounds(10, 40, 100, 20);
         vnos.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent key) {
-                if (key.getKeyChar() >= '0' && key.getKeyChar() <= '9' || key.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                if (key.getKeyChar() >= '0' && key.getKeyChar() <= '9' || key.getKeyCode() == KeyEvent.VK_BACK_SPACE
+                        || key.getKeyChar() == '.'
+                        || key.getKeyCode() == KeyEvent.VK_CONTROL && key.getKeyChar() == 'v') {
                     vnos.setEditable(true);
                     napis3.setText("");
                 } else {
@@ -84,10 +86,10 @@ class Pretvornik_Valute {
         window.setVisible(true);
     }
 
-    public static String pretvori(JComboBox vValuto, JComboBox izValute, String vsota) {
+    public static String pretvori(JComboBox<String> vValuto, JComboBox<String> izValute, String vsota) {
         String data = izValute.getItemAt(izValute.getSelectedIndex()) + "to"
                 + vValuto.getItemAt(vValuto.getSelectedIndex());
-        int stevilka = Integer.parseInt(vsota);
+        double stevilka = Double.parseDouble(vsota);
         switch (data) {
             case "EURtoUSD": {
                 return String.valueOf(stevilka * 1.09);
