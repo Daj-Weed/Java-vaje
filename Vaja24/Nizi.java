@@ -42,8 +42,8 @@ public class Nizi {
   public int kjeiJeVNizu(String niz, String podniz) {
     int plac = 0;
     if (aliJeVNizu(niz, podniz)) {
-      for (int i = 0; i <= nizDolzina - podnizDolzina; i++) {
-        if (niz.substring(i, i + podnizDolzina).equals(podniz)) {
+      for (int i = 0; i <= niz.length() - podniz.length(); i++) {
+        if (niz.substring(i, i + podniz.length()).equals(podniz)) {
             return i;
         }
     }
@@ -51,6 +51,15 @@ public class Nizi {
       plac = -1;
     }
     return plac;
+  }  
+  
+  public int kolikoJeVNizu(String niz, char c) {
+    int koliko = 0;
+    for (int i = 0; i < niz.length(); i++) {
+      if(niz.charAt(i) == c)
+        koliko++;
+    }
+    return koliko;
   }
 
   public void izpisiPrvaInZadnjaDva(String niz) {
