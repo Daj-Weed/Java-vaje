@@ -170,14 +170,14 @@ public class SodokuA {
 
   public String aliJeToResitevSodoka() {
     if (aliJeKombinacijaSodokaResena()) {
-      return "To je resitev % Sodoka";
+      return "To JE resitev % SODOKA, bravo!";
     } else if (aliJeHyperSodokuResen()) {
-      return "To je resitev Hyper Sodoka";
+      return "To JE resitev Hyper SODOKA, bravo!";
     } else if (aliJeX_SodokuResen()) {
-      return "To je resitev X Sodoka";
+      return "To JE resitev X SODOKA, bravo!";
     } else if (aliJeSodokuResen()) {
-      return "To je resitev Sodoka";
+      return "To JE resitev SODOKA, bravo!";
     }
-    return "To ni resitev Sodoka";
+    return "To NI resitev SODOKA, poizkusi se enkrat!";
   }
 }

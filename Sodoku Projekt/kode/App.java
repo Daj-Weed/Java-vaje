@@ -20,8 +20,8 @@ public class App extends JFrame {
         zgeneririajButton.setBounds(20, 20, 170, 20);
         JLabel izpis = new JLabel();
         izpis.setForeground(Color.red);
-        izpis.setBounds(110, 335, 120, 20);
-        String izbira[] = { "Lahka", "Srednja", "Tezka" };
+        izpis.setBounds(110, 335, 245, 20);
+        String izbira[] = { "Lahka", "Srednja", "Tezka", "Resitev" };
         JComboBox<String> tezavnost = new JComboBox<>(izbira);
         tezavnost.setBounds(200, 20, 75, 20);
         Font font = new Font("Arial", Font.BOLD, 20);
@@ -114,7 +114,7 @@ public class App extends JFrame {
         window.add(tezavnost);
         window.add(preveriButton);
         window.add(zgeneririajButton);
-        window.setSize(335, 400);
+        window.setSize(370, 400);
         window.setLayout(null);
         window.setVisible(true);
     }
